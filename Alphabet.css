@@ -1,0 +1,105 @@
+body{
+     background-color:#FFFFFF;
+}
+#background{
+    padding-top: 400px;
+    padding-right:100px;
+    padding-left:400px;
+    padding-bottom: 0px;
+    margin-top:-100px;
+    margin-left:-100px;
+    margin-right:0px;
+    background-image: url("http://i.imgur.com/TuA3KBl.jpg");
+
+}
+
+h4{
+     font-family: "Verdana";
+     font-size:25pt;
+}
+h5{
+     font-family: "Verdana";
+     font-size:25pt;
+}
+.list{
+     border-style: groove;
+     border-color: Blue;
+     border-width: 5px;
+     margin-left: 300px;
+     margin-right: 300px;
+     padding-top: 5px;
+     padding-bottom: 5px;
+}
+.learn{
+    font-family: "Rockwell";
+    font-size:30pt;
+    color:Black;
+}
+#line-separator{
+     margin-top:10px;
+     height:20px;
+     background: linear-gradient(to bottom, white, #87CEFA);
+     border-bottom:.5px solid #313030;
+}
+h2{
+    font-family: "Rockwell";
+    font-size:60pt;
+    color:white;
+    margin-top:-275px;
+    margin-bottom:250px;
+    margin-right: 300px;
+    margin-left: 300px;
+    padding: 5px;
+}
+h3{
+    font-family: "Rockwell";
+    color:black;
+    font-size:25pt;
+    margin-top:-50px;
+    margin-bottom:0px;
+}
+
+#bar{
+     margin-top:0px;
+     margin-left:-100px;
+     margin-bottom:-25px;
+     background: black;
+     font-family:"Verdana";
+     position:absolute;
+     height:5px;
+     width:1350px;
+     background-size: 100%;
+}
+#Diagram{
+    margin-top:25px;
+    margin-left:270px;
+    padding-top: 793px;
+    padding-right:0px;
+    padding-left:100px;
+    background-image: url("http://i.imgur.com/eqtKaux.png");
+    background-repeat: no-repeat;
+}
+#Previous{
+    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 33%, rgba(41,184,229,1) 96%, rgba(188,224,238,1) 100%);
+    height:40px;
+    width: 200px;
+    font-family: "Rockwell";
+    font-size:15pt;
+    border-color: #1E90FF;
+    border-radius: 12px;
+    margin-top:-1425px;
+    margin-left: 50px;
+    float: left;
+}
+#Next{
+    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 33%, rgba(41,184,229,1) 96%, rgba(188,224,238,1) 100%);
+    height:40px;
+    width: 200px;
+    font-family: "Rockwell";
+    font-size:15pt;
+    border-color: #1E90FF;
+    border-radius: 12px;
+    margin-top: -1425px;
+    margin-right: 10px;
+    float: right;
+}

@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Learn</title>
+<link href ="Learn.css" rel="stylesheet">
+<h1></h1>
+<h2 align ="center">Let's Practice</h2>
+<div id= "bar"></div>
+<h3 align = "center">
+    Practice Semaphore By Going Through These Exercises
+</h3>
+</head>
+<script>
+    var random = -1;
+                
+    var img = document.createElement("img");
+
+    function alphabet(){
+    
+    var randomNum = Math.floor(Math.random()*28 +1);
+     var signals = {
+        1: "http://i.imgur.com/c5NizBP.jpg",
+        2: "http://i.imgur.com/dGNCkUG.jpg",
+        3: "http://i.imgur.com/9UsLPzJ.jpg",
+        4: "http://i.imgur.com/3TWu4KA.jpg",
+        5: "http://i.imgur.com/27ZpPVH.jpg",
+        6: "http://i.imgur.com/7yQT03h.jpg",
+        7: "http://i.imgur.com/kJqqgW0.jpg",
+        8: "http://i.imgur.com/Ne6SQti.jpg",
+        9: "http://i.imgur.com/BIDF9Lu.jpg",
+        10:"http://i.imgur.com/EgD5YKU.jpg",
+        11:"http://i.imgur.com/hAYVO56.jpg",
+        12:"http://i.imgur.com/k8eb1o7.jpg",
+        13:"http://i.imgur.com/8di0cYN.jpg",
+        14:"http://i.imgur.com/ZgweF0y.jpg",
+        15:"http://i.imgur.com/4gQz1V7.jpg",
+        16:"http://i.imgur.com/K2XV802.jpg",
+        17:"http://i.imgur.com/HlJImS9.jpg",
+        18:"http://i.imgur.com/3OZXr8x.jpg",
+        19:"http://i.imgur.com/k3ANYyJ.jpg",
+        20:"http://i.imgur.com/1va2O0c.jpg",
+        21:"http://i.imgur.com/wLhe8Lq.jpg",
+        22:"http://i.imgur.com/CH4sVgk.jpg",
+        23:"http://i.imgur.com/Grwqeqt.jpg",
+        24:"http://i.imgur.com/J0rNSr2.jpg",
+        25:"http://i.imgur.com/6c63Xcl.jpg",
+        26:"http://i.imgur.com/aPiAlAu.jpg",
+        27:"http://i.imgur.com/AGQLeNF.jpg", //" "
+        28:"http://i.imgur.com/AX3PDoK.jpg"}; //^
+        
+        img.width = 200;
+        img.height = 200;
+        img.alt="";
+        img.align="left";
+        
+        img.src = signals[randomNum];
+        document.body.appendChild(img);
+            
+        random = randomNum;
+        return randomNum;
+    }
+      var img = document.createElement("img");
+    function equals(randomNum,answer){
+        
+        var correspondingLetters = {
+            1:"a",
+            2:"b",
+            3:"c",
+            4:"d",
+            5:"e",
+            6:"f",
+            7:"g",
+            8:"h",
+            9:"i",
+            10:"j",
+            11:"k",
+            12:"l",
+            13:"m",
+            14:"n",
+            15:"o",
+            16:"p",
+            17:"q",
+            18:"r",
+            19:"s",
+            20:"t",
+            21:"u",
+            22:"v",
+            23:"w",
+            24:"x",
+            25:"y",
+            26:"z",
+            27:" ",
+            28:"^"
+        }; 
+        if(correspondingLetters[randomNum] === answer){
+            alert("Correct!");
+        }
+        else{
+            alert("Incorrect!");    
+        }    
+    }
+    function submit(){
+        equals(random,document.getElementById("answer").value);   
+    }
+    
+
+        function thingy(wow){
+       var splitString = wow.split("");
+        var signals = {
+        "a": "http://i.imgur.com/c5NizBP.jpg",
+        "b": "http://i.imgur.com/dGNCkUG.jpg",
+        "c": "http://i.imgur.com/9UsLPzJ.jpg",
+        "d": "http://i.imgur.com/3TWu4KA.jpg",
+        "e": "http://i.imgur.com/27ZpPVH.jpg",
+        "f": "http://i.imgur.com/7yQT03h.jpg",
+        "g": "http://i.imgur.com/kJqqgW0.jpg",
+        "h":"http://i.imgur.com/Ne6SQti.jpg",
+        "i":"http://i.imgur.com/BIDF9Lu.jpg",
+        "j": "http://i.imgur.com/EgD5YKU.jpg",
+        "k":"http://i.imgur.com/hAYVO56.jpg",
+        "l": "http://i.imgur.com/k8eb1o7.jpg",
+        "m":"http://i.imgur.com/8di0cYN.jpg",
+        "n":"http://i.imgur.com/ZgweF0y.jpg",
+        "o":"http://i.imgur.com/4gQz1V7.jpg",
+        "p":"http://i.imgur.com/K2XV802.jpg",
+        "q":"http://i.imgur.com/HlJImS9.jpg",
+        "r":"http://i.imgur.com/3OZXr8x.jpg",
+        "s":"http://i.imgur.com/k3ANYyJ.jpg",
+        "t":"http://i.imgur.com/1va2O0c.jpg",
+        "u":"http://i.imgur.com/wLhe8Lq.jpg",
+        "v":"http://i.imgur.com/CH4sVgk.jpg",
+        "w":"http://i.imgur.com/Grwqeqt.jpg",
+        "x":"http://i.imgur.com/J0rNSr2.jpg",
+        "y":"http://i.imgur.com/6c63Xcl.jpg" ,
+        "z":"http://i.imgur.com/aPiAlAu.jpg",
+        " ":"http://i.imgur.com/AGQLeNF.jpg",
+        "^":"http://i.imgur.com/AX3PDoK.jpg" };
+        
+        
+  
+    
+        img.width = 300;
+        img.height = 300;
+        img.alt = "";
+        img.align="right";
+        count = 0;
+        
+        function displayChar() {
+            if(count == splitString.length) return;
+            img.src = signals[splitString[count]];
+            document.body.appendChild(img);
+            count ++;
+            setTimeout(function() {
+                displayChar();
+            }, 1000);
+        }
+    
+        displayChar();
+   }
+
+    
+    function submit2(){
+        thingy(document.getElementById("answer2").value);
+    }
+    
+    
+</script>
+<div><p align="center" id="learn">To learn Semaphore, try these exercises! The box on the left generates a picture of a random semaphore letter for you to guess.
+       Insert the correct letter that is associated with that signal.<br></br>
+       In the box on the right you can input any letters you wish and they will be translated into semaphore.</p></div>
+<div id= "AnswerBox" align = "right">
+    <input id="answer2" type = "text" size = "20">
+    <input type = "submit" value = "Enter" onclick=submit2()>
+</div>
+<div id="OneLetterAnswer">
+    <button type="button" onclick=alphabet()>Random Picture</button>
+    <input id="answer" type = "text" size = "20">
+    <input type = "submit" value = "Submit" onclick=submit()>
+</div>
+<div>
+    <a href = "HomePage.html"</a><button id= "Home" type = "button">Home</button>
+    <a href = "Alphabet.html"</a><button id= "Alphabet" type = "button">Alphabet</button>
+    <a href = "Test.html"</a><button id = "Test" type = "button">Test</button>
+    </div>
+<body class= "color">
+
+
+</body>
+</html>

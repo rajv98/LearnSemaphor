@@ -1,0 +1,506 @@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <title>Page Title</title>
+      <link href="Test.css" rel="stylesheet">
+</head>
+    <h1 align="center"> Real Time Practice </h1>
+    <h2 align = "center"> Test Your Knowledge</h2>
+    <h3></h3>
+    <div id= "bar"></div>
+
+<body>
+    <div id="Description" align="center">
+        <p> Okay now that you've got the ropes, lets test your skills.
+        Hit start to recieve a randomized semaphore message and type your answer inside the text box to see how much you've learned.
+        If you want to test your skills and speed the messages up, select an adequate speed from the drop box.</p>
+    </div>
+
+    
+ <div id ="MovingMan" align="center"> </div>
+    
+<script>
+    var runcount = 0;
+    var finalStr = "";
+function start(){
+        var choice = Math.floor(Math.random() * 2 + 1);
+        var LF, BG, streetNum = Math.floor(Math.random() * 120 + 1);
+        var name, age = Math.floor(Math.random() * 20 + 1);
+        var color, what, why;
+        var ones, tens, hundreds;
+        var whats = ["ems", "quad", "cg", "police", "ac"];
+        var ems = ["nb", "stroke", "seizure", "cpr", "broken arm", "broken leg",
+                   "dislocated shoulder", "dislocated hip", "hyperthermia", "hypothermia"];
+        var quad = ["fish hook", "beer", "transport", "disorderly beach patron"];
+        var cg = ["capsized boat", "boat crash", "inlet rescue"];
+        var police = ["disorderly beach patrons", "beer", "fight"];
+        var ac = ["beach whale", "beached dolphin", "beached turtle", "injured seabird", "dead seabird"];
+        
+        var girlNames = ["olivia", "emma", "ava", "sophia", "isabella", "mia",
+                         "charlotte", "abigail", "amelia","harper", "madison",
+                         "emily", "evelyn", "sofia", "aria", "victoria", "elizabeth",
+                         "scarlett", "mary", "ella", "zoey", "grace", "lily"];
+        var boyNames = ["joe", "ben", "edward", "liam", "terrell","ian", "miles",
+                        "lucas", "joseph", "spencer", "sean", "kyle", "bradley",
+                        "dave", "john", "jack", "malcolm", "daniel", "eugene",
+                        "ibrahim", "corey", "zac", "foster", "sammy"];
+        var colors = ["red", "yellow", "orange", "blue", "green", "purple",
+                      "white", "black", "black n white stripes", "red flowers",
+                      "blue flowers", "yellow flowers"];
+        
+        var count = 0;
+        var speed = document.getElementById("speed").value;
+        var answer;
+     
+        
+     if(runcount === 0){
+        runcount = 1;
+        if(choice === 1){
+            
+           // L/F B/G
+           LF = Math.floor(Math.random() * 2 + 1);
+           if(LF === 1){
+            finalStr = finalStr.concat("l");
+           }else{
+            finalStr = finalStr.concat("f");
+           }
+           finalStr = finalStr.concat(" ");
+           BG = Math.floor(Math.random() * 2 + 1);
+           if(BG === 1){
+            finalStr = finalStr.concat("g");
+           }else{
+            finalStr = finalStr.concat("b");
+           }
+             finalStr = finalStr.concat(" ");
+           if(LF === 1){
+            finalStr = finalStr.concat("from");
+           }else{
+            finalStr = finalStr.concat("on");
+           }
+        
+           if(streetNum > 120){
+            
+           }else{
+            ones = streetNum % 10;
+            streetNum /= 10;
+            tens = Math.floor(streetNum % 10);
+            streetNum /= 10;
+            hundreds = Math.floor(streetNum);
+           
+        
+            
+            
+            if(hundreds === 1){
+               finalStr = finalStr.concat(" one");
+               if(ones === 0 && tens === 0){
+                finalStr = finalStr.concat(" hundred");
+               }
+            }
+            
+             switch(tens){
+                case 0:
+                    if(hundreds === 1 && ones !== 0){
+                        finalStr = finalStr.concat(" o");
+                    }
+                    break;
+                case 1:
+                    if(ones === 1){
+                        finalStr = finalStr.concat(" eleven");
+                    }else if(ones === 2){
+                        finalStr = finalStr.concat(" twelve");
+                    }else if(ones === 3){
+                        finalStr = finalStr.concat(" thirteen");
+                    }else if(ones === 4){
+                        finalStr = finalStr.concat(" fourteen");
+                    }else if(ones === 5){
+                        finalStr = finalStr.concat(" fifteen");
+                    }else if(ones === 6){
+                        finalStr = finalStr.concat(" sixteen");
+                    }else if(ones === 7){
+                        finalStr = finalStr.concat(" seventeen");
+                    }else if(ones === 8){
+                        finalStr = finalStr.concat(" ateteen");
+                    }else if(ones === 19){
+                        finalStr = finalStr.concat(" nineteen");
+                    }
+                    ones = 0;
+                    break;
+                 case 2:
+                    finalStr = finalStr.concat(" twenty");
+                    break;
+                 case 3:
+                    finalStr = finalStr.concat(" thirty");
+                    break;
+                 case 4:
+                    finalStr = finalStr.concat(" fourty");
+                    break;
+                 case 5:
+                    finalStr = finalStr.concat(" fifty");
+                    break;
+                 case 6:
+                    finalStr = finalStr.concat(" sixty");
+                    break;
+                 case 7:
+                    finalStr = finalStr.concat(" seventy");
+                    break;
+                 case 8:
+                    finalStr = finalStr.concat(" atey");
+                    break;
+                 case 9:
+                    finalStr = finalStr.concat(" ninety");
+                    break;
+             }
+            switch(ones){
+                case 1:
+                    finalStr = finalStr.concat(" one");
+                    break;
+                 case 2:
+                    finalStr = finalStr.concat(" two");
+                    break;
+                 case 3:
+                    finalStr = finalStr.concat(" three");
+                    break;
+                 case 4:
+                    finalStr = finalStr.concat(" four");
+                    break;
+                 case 5:
+                    finalStr = finalStr.concat(" five");
+                    break;
+                 case 6:
+                    finalStr = finalStr.concat(" six");
+                    break;
+                 case 7:
+                    finalStr = finalStr.concat(" seven");
+                    break;
+                 case 8:
+                    finalStr = finalStr.concat(" ate");
+                    break;
+                 case 9:
+                    finalStr = finalStr.concat(" nine");
+                    break;
+            }
+           }
+           finalStr = finalStr.concat(" n");
+           if(BG === 1){
+            name = Math.floor(Math.random() * girlNames.length);
+            finalStr = finalStr.concat(" " + girlNames[name]);
+           }else{
+            name = Math.floor(Math.random() * boyNames.length);
+            finalStr = finalStr.concat(" " + boyNames[name]);
+            
+           }
+           
+           finalStr = finalStr.concat(" a");
+           
+           switch(age){
+            case 1:
+               finalStr = finalStr.concat(" one");
+               break;
+             case 2:
+               finalStr = finalStr.concat(" two");
+               break;
+             case 3:
+               finalStr = finalStr.concat(" three");
+               break;
+             case 4:
+               finalStr = finalStr.concat(" four");
+               break;
+             case 5:
+               finalStr = finalStr.concat(" five");
+               break;
+            case 6:
+               finalStr = finalStr.concat(" six");
+               break;
+            case 7:
+               finalStr = finalStr.concat(" seven");
+               break;
+            case 8:
+               finalStr = finalStr.concat(" ate");
+               break;
+            case 9:
+               finalStr = finalStr.concat(" nine");
+               break;
+            case 10:
+               finalStr = finalStr.concat(" ten");
+               break;
+            case 11:
+               finalStr = finalStr.concat(" eleven");
+               break;
+            case 12:
+               finalStr = finalStr.concat(" twelve");
+               break;
+            case 13:
+               finalStr = finalStr.concat(" thirteen");
+               break;
+            case 14:
+               finalStr = finalStr.concat(" fourteen");
+               break;
+            case 15:
+               finalStr = finalStr.concat(" fifteen");
+               break;
+            case 16:
+               finalStr = finalStr.concat(" sixteen");
+               break;
+            case 17:
+               finalStr = finalStr.concat(" seventeen");
+               break;
+            case 18:
+               finalStr = finalStr.concat(" ateteen");
+               break;
+            case 19:
+               finalStr = finalStr.concat(" nineteen");
+               break;
+            case 20:
+               finalStr = finalStr.concat(" twenty");
+               break;
+           }
+        
+            finalStr = finalStr.concat(" ^");
+           
+           color = Math.floor(Math.random() * colors.length + 1);
+            finalStr = finalStr.concat(colors[color]);
+           
+           
+        }//end LF BG
+        
+        
+        else if(choice === 2){
+            what = Math.floor(Math.random() * whats.length);
+            finalStr = finalStr.concat(whats[what] + " to");
+            
+             if(streetNum > 120){
+            
+           }else{
+            ones = streetNum % 10;
+            streetNum /= 10;
+            tens = Math.floor(streetNum % 10);
+            streetNum /= 10;
+            hundreds = Math.floor(streetNum);
+            
+        
+            
+            if(hundreds === 1){
+               finalStr = finalStr.concat(" one");
+               if(ones === 0 && tens === 0){
+                finalStr = finalStr.concat(" hundred");
+               }
+            }
+            
+             switch(tens){
+                case 0:
+                    if(hundreds === 1 && ones !== 0){
+                        finalStr = finalStr.concat(" o");
+                    }
+                    break;
+                case 1:
+                    if(ones === 1){
+                        finalStr = finalStr.concat(" eleven");
+                    }else if(ones === 2){
+                        finalStr = finalStr.concat(" twelve");
+                    }else if(ones === 3){
+                        finalStr = finalStr.concat(" thirteen");
+                    }else if(ones === 4){
+                        finalStr = finalStr.concat(" fourteen");
+                    }else if(ones === 5){
+                        finalStr = finalStr.concat(" fifteen");
+                    }else if(ones === 6){
+                        finalStr = finalStr.concat(" sixteen");
+                    }else if(ones === 7){
+                        finalStr = finalStr.concat(" seventeen");
+                    }else if(ones === 8){
+                        finalStr = finalStr.concat(" ateteen");
+                    }else if(ones === 19){
+                        finalStr = finalStr.concat(" nineteen");
+                    }
+                    ones = 0;
+                    break;
+                 case 2:
+                    finalStr = finalStr.concat(" twenty");
+                    break;
+                 case 3:
+                    finalStr = finalStr.concat(" thirty");
+                    break;
+                 case 4:
+                    finalStr = finalStr.concat(" fourty");
+                    break;
+                 case 5:
+                    finalStr = finalStr.concat(" fifty");
+                    break;
+                 case 6:
+                    finalStr = finalStr.concat(" sixty");
+                    break;
+                 case 7:
+                    finalStr = finalStr.concat(" seventy");
+                    break;
+                 case 8:
+                    finalStr = finalStr.concat(" atey");
+                    break;
+                 case 9:
+                    finalStr = finalStr.concat(" ninety");
+                    break;
+             }
+            switch(ones){
+                case 1:
+                    finalStr = finalStr.concat(" one");
+                    break;
+                 case 2:
+                    finalStr = finalStr.concat(" two");
+                    break;
+                 case 3:
+                    finalStr = finalStr.concat(" three");
+                    break;
+                 case 4:
+                    finalStr = finalStr.concat(" four");
+                    break;
+                 case 5:
+                    finalStr = finalStr.concat(" five");
+                    break;
+                 case 6:
+                    finalStr = finalStr.concat(" six");
+                    break;
+                 case 7:
+                    finalStr = finalStr.concat(" seven");
+                    break;
+                 case 8:
+                    finalStr = finalStr.concat(" ate");
+                    break;
+                 case 9:
+                    finalStr = finalStr.concat(" nine");
+                    break;
+            }
+           }
+           finalStr = finalStr.concat(" for");
+           switch(what){
+            case 0:
+                why =  Math.floor(Math.random() * ems.length);
+                finalStr = finalStr.concat(" "+ ems[why]);
+                break;
+            case 1:
+                why =  Math.floor(Math.random() * quad.length);
+                finalStr = finalStr.concat(" "+ quad[why]);
+                break;
+            case 2:
+                why =  Math.floor(Math.random() * cg.length);
+                finalStr = finalStr.concat(" "+ cg[why]);
+                break;
+            case 3:
+                why =  Math.floor(Math.random() * police.length);
+                finalStr = finalStr.concat(" "+ police[why]);
+                break;
+            case 4:
+                why =  Math.floor(Math.random() * ac.length);
+                finalStr = finalStr.concat(" "+ ac[why]);
+                break;
+           }
+    
+        }
+   
+        
+   
+   
+   
+        var splitString = finalStr.split("");
+        var signals = {
+        "a": "http://i.imgur.com/c5NizBP.jpg",
+        "b": "http://i.imgur.com/dGNCkUG.jpg",
+        "c": "http://i.imgur.com/9UsLPzJ.jpg",
+        "d": "http://i.imgur.com/3TWu4KA.jpg",
+        "e": "http://i.imgur.com/27ZpPVH.jpg",
+        "f": "http://i.imgur.com/7yQT03h.jpg",
+        "g": "http://i.imgur.com/kJqqgW0.jpg",
+        "h":"http://i.imgur.com/Ne6SQti.jpg",
+        "i":"http://i.imgur.com/BIDF9Lu.jpg",
+        "j": "http://i.imgur.com/EgD5YKU.jpg",
+        "k":"http://i.imgur.com/hAYVO56.jpg",
+        "l": "http://i.imgur.com/k8eb1o7.jpg",
+        "m":"http://i.imgur.com/8di0cYN.jpg",
+        "n":"http://i.imgur.com/ZgweF0y.jpg",
+        "o": "http://i.imgur.com/4gQz1V7.jpg",
+        "p": "http://i.imgur.com/K2XV802.jpg",
+        "q":"http://i.imgur.com/HlJImS9.jpg",
+        "r":"http://i.imgur.com/3OZXr8x.jpg",
+        "s":"http://i.imgur.com/k3ANYyJ.jpg",
+        "t":"http://i.imgur.com/1va2O0c.jpg",
+        "u":"http://i.imgur.com/wLhe8Lq.jpg",
+        "v":"http://i.imgur.com/CH4sVgk.jpg",
+        "w":"http://i.imgur.com/Grwqeqt.jpg",
+        "x": "http://i.imgur.com/J0rNSr2.jpg",
+        "y":"http://i.imgur.com/6c63Xcl.jpg" ,
+        "z":"http://i.imgur.com/aPiAlAu.jpg",
+        " ":"http://i.imgur.com/AGQLeNF.jpg",
+        "^":"http://i.imgur.com/AX3PDoK.jpg" };
+        
+        answer = document.getElementById("answerBox");
+        
+        
+        
+         var img = document.createElement("img");
+    
+        img.width = 300;
+        img.height = 300;
+        img.alt = "";
+        img.align = "center";
+        
+        
+        count = 0;
+        speed = 1000 * speed;
+        function displayChar() {
+            if(count == splitString.length) return;
+            img.src = signals[splitString[count]];
+            document.getElementById("MovingMan").appendChild(img);
+            count ++;
+            setTimeout(function() {
+                displayChar();
+            }, speed);
+        }
+     }
+        displayChar();
+   }
+   function submit(){
+        check_answer(document.getElementById("answer").value);
+    }
+    function check_answer(answer){
+        if(answer == finalStr){
+            alert("Correct");
+        }else{
+            alert("Incorrect"+finalStr);
+        }
+    }
+</script>
+    <br><br/>
+    <h5 align = "center">
+    <form id ="answerBox">
+    Answer:<br>
+    <input id="answer" type="text" size="50"><br>
+    </h5>
+    </form>
+       <div id="start">
+        <p>
+        <button onclick= "start();" onclick= disabled >Start</button>
+        <input type = "submit" value="Submit" onclick= "submit();">
+        </p>
+        </div> 
+    <form align="center">
+        <div id= "SpeedBox">
+        Select Speed
+        </div>
+    <select id = "speed">
+    <option>0.5</option>
+    <option>0.7</option>
+    <option>1</option>
+    <option>1.25</option>
+    <option>1.5</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    </select>
+    </form>
+    <div align="center">
+        <a href = "HomePage.html"</a><button id= "Previous" type = "button">Home</button>
+    </div>
+</body>
+</html>

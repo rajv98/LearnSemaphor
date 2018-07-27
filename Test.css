@@ -1,0 +1,78 @@
+body{
+     background-color: white;
+     
+}
+h1{
+     color: white;
+     font-weight: 100;
+     font-size: 80px;
+     margin-top: 50px;
+     font-family: "Rockwell";
+     
+}
+h2{
+      margin-top:100px;
+      margin-bottom:-440px;
+}
+h3{
+    padding-top: 400px;
+    padding-right:400px;
+    padding-left:400px;
+    background-image: url("http://i.imgur.com/TuA3KBl.jpg");
+    margin-top:-400px;
+    margin-left:-100px;
+    margin-right:-5px;
+}
+#bar{
+     margin-top:-25px;
+     margin-left:-100px;
+     background: black;
+     font-family:"Verdana";
+     position:absolute;
+     height:7px;
+     width:1363px;
+     background-size: 100%;
+}
+#Description{
+     margin-top:50px;
+     font-size:15pt;
+}
+#Previous{
+    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 33%, rgba(41,184,229,1) 96%, rgba(188,224,238,1) 100%);
+    height:40px;
+    width: 200px;
+    font-family: "Rockwell";
+    font-size:15pt;
+    border-color: #1E90FF;
+    border-radius: 12px;
+    margin-top:200px;
+    margin-left: 520px;
+    float: left;
+}
+#MovingMan{
+    margin-left:625px;
+    margin-right:500px;
+}
+#answerBox{
+     margin-left:430px;
+     font-size:15px;
+     margin-right:430px;
+     margin-top:25px;
+}
+#start{
+    height:40px;
+    width: 200px;
+    margin-left:575px;
+    margin-right:525px;
+    margin-top:-25px;
+    font-family: "Palatino";
+    font-size:15pt;
+}
+
+
+#reset{
+     margin-top:100px;
+}
+#SpeedBox{
+     font-size:10pt;
+}

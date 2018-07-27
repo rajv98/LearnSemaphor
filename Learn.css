@@ -1,0 +1,88 @@
+body{
+    background-color:#87CEFA;
+}
+h1{
+    padding-top: 400px;
+    padding-right:400px;
+    padding-left:400px;
+    margin-top:-150px;
+    margin-left:-100px;
+    margin-right:-8px;
+    background-image: url("http://i.imgur.com/TuA3KBl.jpg");
+}
+h2{
+    font-family: "Rockwell";
+    color:White;
+    font-size:40pt;
+    margin-top:-220px;
+    margin-bottom:170px;
+}
+
+h3{
+    background-color: #FFFFFF;
+    font-family: "Verdana";
+    font-size:25pt;
+    margin-bottom:25px;
+    padding: 5px;
+    margin-right:-7px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+    margin-left:-30px;
+
+}
+#learn{
+    font-family: "Rockwell";
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 100px;
+    border: double;
+    border-color: black;
+    padding: 5px;
+}
+#Home{
+    float:left;
+    margin-left: 50px;
+    margin-top: -500px;
+    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 33%, rgba(41,184,229,1) 96%, rgba(188,224,238,1) 100%);
+    height:40px;
+    width: 200px;
+    font-family: "Rockwell";
+    font-size:15pt;
+    border-color: #1E90FF;
+    border-radius: 12px;
+}
+#Alphabet{
+    float: left;
+    margin-left: 460px;
+    margin-right: 300px;
+    margin-top: -500px;
+    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 33%, rgba(41,184,229,1) 96%, rgba(188,224,238,1) 100%);
+    height:40px;
+    width: 200px;
+    font-family: "Rockwell";
+    font-size:15pt;
+    border-color: #1E90FF;
+    border-radius: 12px;
+}
+#Test{
+    float: right;
+    margin-right: 50px;
+    margin-top: -500px;
+    background: linear-gradient(to bottom, rgba(179,220,237,1) 0%, rgba(179,220,237,1) 33%, rgba(41,184,229,1) 96%, rgba(188,224,238,1) 100%);
+    height:40px;
+    width: 200px;
+    font-family: "Rockwell";
+    font-size:15pt;
+    border-color: #1E90FF;
+    border-radius: 12px;
+}
+#OneLetterAnswer{
+    margin-top:-50px;
+    margin-bottom:100px;
+}
+#AnswerBox{
+    margin-top:180px;
+    margin-bottom:25px;
+    margin-left:300px;
+}
